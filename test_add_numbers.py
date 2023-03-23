@@ -23,6 +23,3 @@ class TestAddNumbers(unittest.TestCase):
             add_numbers('2', 3)
             add_numbers(2, '3')
             add_numbers('2', '3')
-
-if __name__ == '__main__':
-    unittest.main()
