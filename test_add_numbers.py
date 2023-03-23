@@ -1,5 +1,5 @@
 import unittest
-from add_numbers import add_numbers()
+from add_numbers import add_numbers
 
 class TestAddNumbers(unittest.TestCase):
     def test_add_positive_numbers(self):
