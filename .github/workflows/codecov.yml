@@ -1,0 +1,20 @@
+name: Code coverage
+on: [push]
+jobs:
+  run:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: ["3.8", "3.9"]
+    env:
+      OS: ${{ matrix.os }}
+      PYTHON: '3.7'
+    steps:
+    - name: Codecov
+      # You may pin to the exact commit or the version.
+      # uses: codecov/codecov-action
+      uses: codecov/codecov-action@v3.1.1
+      with:
+        # Repository upload token - get it from codecov.io. Required only for private repositories
+        token: ${{secrets.CODECOV_TOKEN}}
